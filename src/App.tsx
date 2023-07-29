@@ -7,6 +7,8 @@ function App() {
     <div className="App">
       <div data-testid="kanban-board">
         <div data-testid="card-list"></div>
+        <div data-testid="card-list"></div>
+        <div data-testid="card-list"></div>
       </div>
     </div>
   );
