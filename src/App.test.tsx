@@ -15,4 +15,8 @@ test("App Test", () => {
   expect(kanbanboard).toContainElement(todoCardList);
   expect(kanbanboard).toContainElement(progressCardList);
   expect(kanbanboard).toContainElement(doneCardList);
+
+  expect(todoCardList).toHaveTextContent("TODO");
+  expect(progressCardList).toHaveTextContent("PROGRESS");
+  expect(doneCardList).toHaveTextContent("DONE");
 });
