@@ -6,6 +6,10 @@ test("App Test", () => {
   render(<App />);
   const kanbanboard = screen.getByTestId("kanban-board");
 
+  const cardLists = screen.getAllByTestId(/card-list/i);
+
   expect(kanbanboard).toBeInTheDocument();
-  expect(kanbanboard).toContainElement(screen.getByTestId(/card-list/i));
+  expect(kanbanboard).toContainElement(cardLists?.[0]);
+
+  expect(cardLists).toHaveLength(3);
 });
