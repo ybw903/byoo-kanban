@@ -8,8 +8,11 @@ test("App Test", () => {
 
   expect(kanbanboard).toBeInTheDocument();
 
-  const cardListContainer = screen.getByTestId("card-list-container");
+  const cardCreateBtn = screen.getByRole("button", { name: "Add Todo" });
 
+  expect(kanbanboard).toContainElement(cardCreateBtn);
+
+  const cardListContainer = screen.getByTestId("card-list-container");
   const todoCardList = screen.getByTestId("card-list-todo");
   const progressCardList = screen.getByTestId("card-list-progress");
   const doneCardList = screen.getByTestId("card-list-done");
