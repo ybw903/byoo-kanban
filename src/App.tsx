@@ -6,9 +6,11 @@ function App() {
   return (
     <div className="App">
       <div data-testid="kanban-board">
-        <div data-testid="card-list-todo">TODO</div>
-        <div data-testid="card-list-progress">PROGRESSS</div>
-        <div data-testid="card-list-done">DONE</div>
+        <div data-testid="card-list-container">
+          <div data-testid="card-list-todo">TODO</div>
+          <div data-testid="card-list-progress">PROGRESSS</div>
+          <div data-testid="card-list-done">DONE</div>
+        </div>
       </div>
     </div>
   );
