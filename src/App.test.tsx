@@ -8,13 +8,17 @@ test("App Test", () => {
 
   expect(kanbanboard).toBeInTheDocument();
 
+  const cardListContainer = screen.getByTestId("card-list-container");
+
   const todoCardList = screen.getByTestId("card-list-todo");
   const progressCardList = screen.getByTestId("card-list-progress");
   const doneCardList = screen.getByTestId("card-list-done");
 
-  expect(kanbanboard).toContainElement(todoCardList);
-  expect(kanbanboard).toContainElement(progressCardList);
-  expect(kanbanboard).toContainElement(doneCardList);
+  expect(kanbanboard).toContainElement(cardListContainer);
+
+  expect(cardListContainer).toContainElement(todoCardList);
+  expect(cardListContainer).toContainElement(progressCardList);
+  expect(cardListContainer).toContainElement(doneCardList);
 
   expect(todoCardList).toHaveTextContent("TODO");
   expect(progressCardList).toHaveTextContent("PROGRESS");
